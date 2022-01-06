@@ -1,0 +1,64 @@
+
+//get all movies api 
+get http://localhost:3000/movies/
+
+###
+
+//api 1//... get all movie names
+
+get http://localhost:3000/movies/names/
+
+
+###
+
+
+///api 2 post a movie
+POST http://localhost:3000/movies/
+Content-Type: application/json
+
+{
+  "directorId": 6,
+  "movieName": "Jurassic Park",
+  "leadActor": "Jeff Goldblum"
+}
+
+
+###
+//api. 3... get movie by movie id
+
+
+GET http://localhost:3000/movie/46/
+
+###
+
+//api 4...update movie details
+
+put http://localhost:3000/movie/117/
+Content-Type: application/json
+
+{
+  "directorId": 24,
+  "movieName": "Thor",
+  "leadActor": "Christopher Hemsworth"
+}
+
+
+###
+
+
+//api 5...Deletes a movie from the movie table based on the movie ID
+
+DELETE http://localhost:3000/movie/118/
+
+###
+
+// api 6  get directos list
+
+
+get http://localhost:3000/directors/
+
+###
+//api 7 ... Returns a list of all movie names directed by a specific director
+
+
+get http://localhost:3000/directors/24/movies/
